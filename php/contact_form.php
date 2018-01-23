@@ -47,13 +47,16 @@
 	$message = $_POST['message'];
 	$from = $email;
 	$subject = 'Nuevo mensaje de Contacto para Russiabogados';
-	
+	$headers = 'From: contacto@russiabogados.com' . "\r\n" .
+    'Reply-To: '.$_POST['email']. "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
 	$body = "Cliente: $name\nCorreo: $email\nMensaje:\n$message";
 
 
 	//send the email
 	$result = '';
-	if (mail ($to, $subject, $body)) {
+	if (mail ($to, $subject, $body, $headers)) {
 		$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
  		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
 		$result .= 'Gracias!! Hemos recibido tu mensaje, y nos pondremos en contacto contigo tan pronto sea posible';
