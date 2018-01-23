@@ -7,6 +7,7 @@
 
         <title>Russi Abogados</title>
 
+        <link href="assets/css/fontawesome-all.css" rel="stylesheet">
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
@@ -44,7 +45,6 @@
                     <li class="active"><a href="#header">Inicio<span class="sr-only">(current)</span></a></li>
                     <li><a href="#choose">Porqué escogernos</a></li>
                     <li><a href="#practice">Áreas</a></li>
-                    <li><a href="#slider-1">Casos</a></li>
                     <li><a href="#team">Equipo</a></li>
                     <li><a href="#contact">Contáctenos</a></li>
                   </ul>
@@ -77,7 +77,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <h1>
-                                    AGENDE SU CONSULTA<br>
+                                    AGENDE SU CITA<br>
                                     <small>LLÁMENOS</small>
                                 </h1>
                             </div>
@@ -102,31 +102,32 @@
                         </div>
                     </div>
 
+
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="choose-box">
-                                <span class="choose-icon ion-social-angular-outline"></span>
+                                <span class="fas fa-trophy fa-7x"></span>
                                 <h3 class="choose-title">Mejores abogados</h3>
                                 <p class="choose-detail">
-                                    Somos los mejores abogados, excelentes en nuestro trabajo y buscamos garantizarle siempre el mejor servicio y atención en cualquier proceso legal
+                                    Somos abogados con amplia experiencia y una sólida reputación. Proponemos soluciones integrales innovadoras con el mejor servicio y atención, generando confianza y resultados.
                                 </p>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="choose-box">
-                                <span class="choose-icon ion-compose"></span>
+                                <span class="fas fa-certificate fa-7x"></span>
                                 <h3 class="choose-title">Altamente Calificados</h3>
                                 <p class="choose-detail">
-                                    La calidad en nuestro trabajo destaca, pues te brindamos las soluciones ideales y óptimas según sea tu caso siempre con la mejor gestión
+                                    Ofrecemos asesoría jurídica de la más alta calidad. Contamos con profesionales competitivos y de excelentes cualidades humanas, dispuestos a brindar consultoría legal de manera personalizada y oportuna.
                                 </p>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="choose-box">
-                                <span class="choose-icon ion-android-bulb"></span>
-                                <h3 class="choose-title">Completamente Confiable</h3>
+                                <span class="fas fa-check fa-7x"></span>
+                                <h3 class="choose-title">Completamente Confiables</h3>
                                 <p class="choose-detail">
-                                    Puede estar tranquilo en cualquier proceso que nos confie pues somos totalmente transparentes y legales
+                                    Nuestra misión es defender los intereses de nuestros clientes, y ayudarles a resolver sus controversias a través de orientación profesional inspirada en los más altos valores éticos y de servicio.   
                                 </p>
                             </div>
                         </div>
@@ -166,7 +167,7 @@
                                         <div class="c-table">
                                             <div class="ct-cell">
                                                 <span class="paractice-icon ion-ios-people"></span>
-                                                <h3 class="practice-title">Derecho Familiar</h3>
+                                                <h3 class="practice-title">Derecho de Familia</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -210,14 +211,13 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="title-box">
-                                <p class="section-subtitle">Diligencie el siguiente formulario para</p>
                                 <h2 class="section-title">SOLICITE SU CONSULTA</h2>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <form id="consultation-form" class="consultation-form">
+                        <form id="consultation-form" class="consultation-form" action="php/consultation_form.php" method="post">
                             <div class="form-group">
                                 <div class="col-sm-4">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
@@ -232,7 +232,7 @@
                                 <div class="col-sm-4">
                                     <select class="selectpicker" data-live-search="false" data-width="100%">
                                         <option data-tokens="civil">Derecho Civil</option>
-                                        <option data-tokens="familia">Derecho Familia</option>
+                                        <option data-tokens="familia">Derecho de Familia</option>
                                         <option data-tokens="comercial">Derecho Comercial</option>
                                         <option data-tokens="laboral">Derecho Laboral</option>
                                     </select>
@@ -240,56 +240,15 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <textarea class="form-control" rows="8" placeholder="Descripción del caso" id="case-des" name="case-des"></textarea>
+                                    <textarea class="form-control" rows="8" placeholder="Descripción del caso" id="consulta" name="consulta"></textarea>
                                     <!-- <input type="text" class="form-control" id="case-des" placeholder="Case Description..."> -->
                                 </div>
                             </div>
                             <div class="col-sm-4 col-sm-offset-4">
-                                <button id="cnfsubmit" type="submit" class="btn btn-default btn-block btn-cn">Enviar</button>
+                                <button id="cfsubmit" type="submit" class="btn btn-default btn-block">Enviar <span class="ion-paper-airplane"></span></button>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </section>
-
-        <!-- Slider 1 -->
-            <section id="slider-1" class="slider-1 overlay-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 hidden-xs">
-                            <img class="img-responsive img-full mb0" src="assets/images/familly.png" alt="familly">
-                        </div>
-                        <div class="col-sm-7 col-sm-offset-1">
-                            <div id="slider_1" class="owl-carousel">
-                                <div class="item">
-                                    <div class="slider-1-item-box">
-                                        <span class="slider-icon ion-ios-people"></span>
-                                        <h2>+200 casos derecho familiar</h2>
-                                        <p>
-                                            Con orgullo hemos ganado más de 200 casos en derecho de familia permitiendo así muchas veces asegurar el bienestar de los hijos y que estos mismos puedan compartir tiempo de calidad con sus padres.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-1-item-box">
-                                        <span class="slider-icon ion-settings"></span>
-                                        <h2>Justicia Laboral</h2>
-                                        <p>
-                                           Nos apasiona destacar que hemos logrado conservar el derecho laboral de más de 300 trabajadores, siempre velando por la integridad de cada uno y por consiguiente su bienestar mental y emocional.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-1-item-box">
-                                        <span class="slider-icon ion-ios-cart"></span>
-                                        <h2>Comercio totalmente legal</h2>
-                                        <p>
-                                            Hemos logrado legalizar más de 50 establecimientos que desean brindar sus servicios a nuestro pais, siempre en cumplimiento de todas las normatividades requeridas.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="consultFormResponse"></div>
                     </div>
                 </div>
             </section>
@@ -300,8 +259,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="title-box">
-                                <p class="section-subtitle">Conoce nuestro</p>
-                                <h2 class="section-title">Equipo de abogados</h2>
+                                <h2 class="section-title">Directora General</h2>
                             </div>
                         </div>
                     </div>
@@ -309,13 +267,11 @@
                     <div class="row">
                         <div class="col-sm-4 col-sm-offset-4">
                             <div class="team-box">
-                                <img class="img-responsive img-full" src="assets/images/russi.jpg" alt="team">
+                                <img class="img-responsive img-full" src="assets/images/russi2.jpg" alt="team">
                                 <div class="team-detail">
                                     <ul>
-                                        <li><h3>Mónica Andrea Calderón Russi</h3></li>
-                                        <li><h4>Miembro</h4></li>
-                                        <li>Abogada</li>
-                                        <li>Experta en Derecho Civil</li>
+                                        <li><h3>Mónica Calderón Russi</h3></li>
+                                        <li><h4>Abogada Consultora</h4></li>
                                     </ul>
                                 </div>
                             </div>
@@ -332,22 +288,20 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="title-box">
-                                <p class="section-subtitle">You may want to</p>
-                                <h2 class="section-title">Contact us</h2>
+                                <h2 class="section-title">Contáctenos</h2>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <img src="assets/images/logo.png" alt="logo" class="contact-logo">
                             <p>
-                                This is Texas Lawyers, an awesome template for Lawyers. It provides everything and more for a lower. Search no more, Download this now.This is Texas Lawyers, an awesome template for Lawyers.
+                                Estaremos dispuestos a resolver sus inquietudes y asesorarle en materia legal. 
                             </p>
                             <ul>
-                                <li><span class="ion-location"></span>322, Adress, Lorem Ipsum Avenue, London, Earth</li>
-                                <li><span class="ion-android-call"></span>(888) 123-456-7890</li>
-                                <li><span class="ion-paper-airplane"></span>thisisfakeemail@noreply.com</li>
+                                <li><span class="fas fa-map-marker fa-lg"></span>Calle 35 N° 12 - 52 Oficina 311 Edificio Nasa - Bucaramanga</li>
+                                <li><span class="fas fa-phone fa-lg"></span>313 348 1276</li>
+                                <li><span class="fas fa-envelope fa-lg"></span>abogadarussi@gmail.com</li>
                             </ul>
                         </div>
                         <div class="col-sm-6">
@@ -356,21 +310,21 @@
                                     <span class="input-group-addon">
                                         <i class="ion-person"></i>
                                     </span> 
-                                    <input class="form-control" type="text" placeholder="Name" name="name" required>
+                                    <input class="form-control" type="text" placeholder="Nombre" name="name" required>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon">
                                         <i class="ion-email"></i>
                                     </span>
-                                    <input class="form-control" name="email" type="email" placeholder="Email address" required>
+                                    <input class="form-control" name="email" type="email" placeholder="Correo electrónico" required>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon custom-addon">
                                         <i class="ion-chatbubbles"></i>
                                     </span>
-                                    <textarea class="form-control" rows="8" placeholder="Write Message" name="message"></textarea>
+                                    <textarea class="form-control" rows="4" placeholder="Escríbenos" name="message"></textarea>
                                 </div>
-                                <button id="cfsubmit" type="submit" class="btn btn-default btn-block">Send your Message <span class="ion-paper-airplane"></span></button>
+                                <button id="cfsubmit" type="submit" class="btn btn-default btn-block">Enviar <span class="ion-paper-airplane"></span></button>
                             </form>
 
                             <div id="contactFormResponse"></div>
@@ -379,44 +333,14 @@
                 </div>
             </section>
 
-        <!-- Subscribe -->
-            <div id="subscribe"  class="subscribe">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2>Subscribe to our weekly newsletter</h2>
-                            <p>*Dont worry, we dont spam</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <form class="subscribe-form" id="subscription-form">
-                                <div class="form-group">
-                                    <label class="sr-only" for="subscriber-email">Email address</label>
-                                    <div class="form-group has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon ion-email"></span>
-                                            <input type="email" id="subscriber-email" class="form-control" placeholder="email" required>
-                                        </div>
-                                        <span class="ion-android-checkmark-circle form-control-feedback" aria-hidden="true"></span>
-                                    </div>
-                                </div><!--/input-grpup-->
-
-                                <button type="submit" id="subscribe-button" type="submit" class="btn btn-default hide"><i class="ion-heart"></i> Get it</button>
-                            </form>
-
-                            <!-- SUCCESS OR ERROR MESSAGES -->
-                            <div id="subscription-response"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+ 
         <!-- Footer -->
             <footer class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
                             <p>
-                                @ Texas Lawers
+                                Russiabogados
                             </p>
                         </div>
                         <div class="col-sm-6">
