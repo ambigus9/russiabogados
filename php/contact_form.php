@@ -20,6 +20,11 @@
 		$errors['message'] = 'Por favor ingrese un mensaje';
 	}
 
+	//Check if phone has been entered
+	if (!isset($_POST['phone'])) {
+		$errors['phone'] = 'Por favor ingrese un teléfono';
+	}
+
 	$errorOutput = '';
 
 	if(!empty($errors)){
@@ -45,13 +50,14 @@
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$message = $_POST['message'];
+	$phone = $_POST['phone'];
 	$from = $email;
 	$subject = 'Nuevo mensaje de Contacto para Russiabogados';
 	$headers = 'From: contacto@russiabogados.com' . "\r\n" .
     'Reply-To: '.$_POST['email']. "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-	$body = "Cliente: $name\nCorreo: $email\nMensaje:\n$message";
+	$body = "Cliente: $name\nCorreo: $email\nTelefono: $phone\nMensaje:\n$message";
 
 
 	//send the email
@@ -77,4 +83,3 @@
 
 
 ?>
-	

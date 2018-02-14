@@ -260,23 +260,29 @@
                             <form id="contactForm" action="php/contact_form.php" method="post">
                                 <div class="input-group">      
                                     <span class="input-group-addon">
-                                        <i class="ion-person"></i>
+                                        <i class="fa fa-user fa-sm"></i>
                                     </span> 
                                     <input class="form-control" type="text" placeholder="Nombre" name="name" required>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon">
-                                        <i class="ion-email"></i>
+                                        <i class="fa fa-envelope fa-sm"></i>
                                     </span>
                                     <input class="form-control" name="email" type="email" placeholder="Correo electrónico" required>
                                 </div>
                                 <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-phone fa-sm"></i>
+                                    </span>
+                                    <input class="form-control" name="phone" type="text" placeholder="Teléfono" required>
+                                </div>
+                                <div class="input-group">
                                     <span class="input-group-addon custom-addon">
-                                        <i class="ion-chatbubbles"></i>
+                                        <i class="fa fa-comment fa-sm"></i>
                                     </span>
                                     <textarea class="form-control" rows="4" placeholder="Escríbenos" name="message"></textarea>
                                 </div>
-                                <button id="cfsubmit" type="submit" class="btn btn-default btn-block">Enviar <span class="ion-paper-airplane"></span></button>
+                                <button id="cfsubmit" type="submit" class="btn btn-default btn-block">Enviar <span class="fa fa-paper-plane fa-sm"></span></button>
                             </form>
 
                             <div id="contactFormResponse"></div>
